@@ -1,0 +1,188 @@
+@keyframes changeBackground {
+    0%,100%{
+        opacity: 1;
+        background-image: url('image1.jpg');
+    }
+    10% {
+        opacity: 1;
+        background-image: url('image2.jpg');
+    }
+    20% {
+        opacity: 1;
+        background-image: url('image3.jpg');
+    }
+    30% {
+        opacity: 1;
+        background-image: url('image4.jpg');
+    }
+    40% {
+        opacity: 1;
+        background-image: url('image5.jpg');
+    }
+    50% {
+        opacity: 1;
+        background-image: url('image6.jpg');
+    }
+    60% {
+        opacity: 1;
+        background-image: url('image7.jpg');
+    }
+    70% {
+        opacity: 1;
+        background-image: url('image8.jpg');
+    }
+    80% {
+        opacity: 1;
+        background-image: url('image9.jpg');
+    }
+    90% {
+        opacity: 1;
+        background-image: url('image10.jpg');
+    }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center the container */
+    text-align: center;
+}
+
+.background-slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: changeBackground 30s infinite;
+    background-size: cover;
+    object-fit: cover; /* Ensure the image covers the container without stretching */
+    object-position: center; /* Center the image within the container */
+}
+
+.background-slideshow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Adjust the alpha value for darkness */
+}
+
+.greeting-container {
+    text-align: center;
+    padding: 50px;
+    color: #f5e4e4;
+}
+
+.greeting {
+    font-size: 48px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.message-container {
+    text-align: center;
+    padding: 40px;
+    color: #f7afaf;
+}
+
+.message {
+    font-size: 48px;
+    margin-bottom: 0px;
+    position: relative;
+    
+}
+
+.additional-text-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.additional-text {
+    color: #f5e4e4;
+    font-size: 26px;
+    margin: 0;
+    margin: 0 auto; /* Center the text horizontally */
+    padding-left: 300px; /* Add left padding to create a margin */
+    padding-right: 300px;
+    white-space: pre-line; /* Allow line breaks */
+    overflow: hidden;
+    display: inline-block; /* Make the text centered */
+}
+
+.additional-message {
+    color: #f7afaf;
+    font-size: 18px;
+    margin: 0;
+    margin: 0 auto; /* Center the text horizontally */
+    padding-left: 300px; /* Add left padding to create a margin */
+    padding-right: 300px;
+    white-space: pre-line; /* Allow line breaks */
+    overflow: hidden;
+    display: inline-block; /* Make the text centered */
+}
+
+.action-button-container {
+    text-align: center;
+}
+
+.action-button {
+    display: inline-block;
+    margin-top: 20px; /* Adjust margin as needed */
+    padding: 300px, 300px;
+    font-size: 20px;
+    background-color: #f3c9bd; /* Green color, you can change this */
+    color: rgb(247, 105, 105);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #ffd2b2; /* Darker green color on hover */
+}
+
+/* Add this style for the button */
+.gift-button {
+    display: none; /* Initially hidden */
+    margin-top: 20px;
+    padding: 15px 25px;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: #FF7F50; /* Coral color, adjust as needed */
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.gift-button:hover {
+    background-color: #FF6347; /* Darker coral color on hover, adjust as needed */
+}
+
+
+
+
+
